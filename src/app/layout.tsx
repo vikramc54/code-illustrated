@@ -38,7 +38,6 @@ export const metadata: Metadata = {
     },
   ],
   manifest: "/site.webmanifest",
-  
 };
 
 export default function RootLayout({
@@ -47,7 +46,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html data-theme="light" lang="en">
       <body className={inter.className}>{children}</body>
     </html>
   );
