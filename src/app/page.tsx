@@ -1,9 +1,9 @@
-import Image from "next/image";
+import Navbar from "./_components/navbar";
 
 export default function Home() {
   return (
-    <div className="text-balance">
-
+    <div className="relative bg-first w-full h-full">
+      
     </div>
   );
 }
