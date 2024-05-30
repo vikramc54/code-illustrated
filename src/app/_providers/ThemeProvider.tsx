@@ -22,10 +22,10 @@ export default function ThemeProvider({
     const [selectedTheme, setSelectedTheme] = useState<Themes|undefined>(undefined);
 
     useEffect(() => {
-        const locallyStoredTheme = localStorage.getItem("theme");
+        const locallyStoredTheme = localStorage.getItem("theme") as Themes;
         const systemColorSchemeQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
-        const theme = locallyStoredTheme ?? systemColorSchemeQuery.matches ? "dark" : "light";
+        const theme = locallyStoredTheme ? locallyStoredTheme : systemColorSchemeQuery.matches ? "dark" : "light";
         setSelectedTheme(theme);
 
         const handleSystemColorSchemeChange = (e: MediaQueryListEvent) => {
@@ -45,6 +45,7 @@ export default function ThemeProvider({
     }, []);
 
     useEffect(() => {
+        console.log(selectedTheme);
         if(!selectedTheme) return;
         localStorage.setItem("theme", selectedTheme);
         if(document.documentElement.getAttribute("data-theme") !== selectedTheme) document.documentElement.setAttribute("data-theme", selectedTheme);
