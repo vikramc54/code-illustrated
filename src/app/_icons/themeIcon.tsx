@@ -1,10 +1,11 @@
 "use client"
 
-import useTheme from '@/hooks/useTheme';
+import { useTheme } from "app/_providers/ThemeProvider";
 
 const ThemeIcon = () => {
-    const [selectedTheme, setSelectedTheme] = useTheme();
+    const {selectedTheme, setSelectedTheme} = useTheme();
 
+    if(!selectedTheme) return null;
     return (
         <svg
             className="w-full h-full cursor-pointer"
@@ -19,7 +20,7 @@ const ThemeIcon = () => {
                     <mask id="earth">
                         <rect width="100%" height="100%" fill="white" />
                         <circle
-                            className={`transition-transform duration-700 ${selectedTheme === "light" ? "-rotate-45" : ""}`}
+                            className={`transition-transform duration-700 dark:rotate-0 -rotate-45`}
                             cx="33"
                             cy="17"
                             r="15"

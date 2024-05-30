@@ -19,7 +19,6 @@
     ],
     "baseUrl": "./src",
     "paths": {
-      "@/components/*": ["components/*"],
       "@/hooks/*": ["hooks/*"],
       "@/icons/*": ["icons/*"],
       "@/types/*": ["types/*"],
