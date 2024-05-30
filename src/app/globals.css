@@ -13,20 +13,20 @@ body {
 }
 
 [data-theme="light"] {
-  --color-first: 248 248 248;
-  --color-second: 180 210 231;
-  --color-third: 148 197 204;
-  --color-fourth: 161 166 180;
+  --color-first: 222 222 222;
+  --color-second: 245 245 245;
+  --color-third: 112 86 151;
+  --color-fourth: 11 54 249;
   --color-fifth: 0 1 0;
   --color-primary: 0 0 0;
   --color-secondary: 255 255 255;
 }
 
 [data-theme="dark"] {
-  --color-first: 58 96 110;
-  --color-second: 96 123 125;
-  --color-third: 130 142 130;
-  --color-fourth: 170 174 142;
+  --color-first: 24 24 24;
+  --color-second: 31 31 31;
+  --color-third: 0 120 212;
+  --color-fourth: 255 214 2;
   --color-fifth: 224 224 224;
   --color-primary: 255 255 255;
   --color-secondary: 0 0 0;

@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
 import { useTheme } from "app/_providers/ThemeProvider";
 
-const ThemeIcon = () => {
+export default function ThemeIcon() {
     const {selectedTheme, setSelectedTheme} = useTheme();
 
     if(!selectedTheme) return null;
@@ -90,5 +90,3 @@ const ThemeIcon = () => {
         </svg>
     );
 }
- 
-export default ThemeIcon;

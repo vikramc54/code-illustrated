@@ -45,7 +45,6 @@ export default function ThemeProvider({
     }, []);
 
     useEffect(() => {
-        console.log(selectedTheme);
         if(!selectedTheme) return;
         localStorage.setItem("theme", selectedTheme);
         if(document.documentElement.getAttribute("data-theme") !== selectedTheme) document.documentElement.setAttribute("data-theme", selectedTheme);
