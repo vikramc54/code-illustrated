@@ -29,7 +29,7 @@ export default function Logo() {
     return (
         <span className="text-2xl font-semibold font-sans flex flex-row items-center justify-start">
             <span className="select-none text-fourth">&#123;</span>
-            <span className={`mx-[4px] inline-block transition-[max-width] duration-1000 ease-in-out ${isLogoOpened ? "max-w-full" : "max-w-0"} overflow-hidden whitespace-nowrap`}>
+            <span className={`mx-[4px] inline-block transition-[max-width] duration-1000 ease-[cubic-bezier(.16,.81,.37,.98)] ${isLogoOpened ? "max-w-full" : "max-w-0"} overflow-hidden whitespace-nowrap`}>
                 <span>code i</span>
                 <span className={`inline-block transition-[transform,padding,color] duration-1000 ${isLogoCode && "-skew-x-12 pl-[2px] pr-[1px] text-[#4f9235]"}`}>ll</span>
                 <span className={`transition-[color] duration-1000 ${isLogoCode && "text-[#4f9235]"}`}>ustrated</span>

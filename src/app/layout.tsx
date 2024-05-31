@@ -49,8 +49,9 @@ export default function RootLayout({
 }>) {
   return (
     <html data-theme="light" lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={`text-primary ${inter.className}`}>
         <ThemeProvider>
+          
           <Navbar />
           {children}
         </ThemeProvider>
