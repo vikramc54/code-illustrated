@@ -1,8 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Big_Shoulders_Stencil_Display } from "next/font/google";
 
-const initialTextTime = 1000;
+const bigShouldersFont = Big_Shoulders_Stencil_Display({ subsets: [ "latin" ] })
+
+const initialOpenTime = 500;
+const initialTextTime = 1500;
 const textTime = 2000;
 const prettyTime = 10000;
 
@@ -11,12 +15,14 @@ export default function Logo() {
     const [isLogoCode, setIsLogoCode] = useState(false);
 
     useEffect(() => {
-        setIsLogoOpened(true);
+        setTimeout(() => {
+            setIsLogoOpened(true);
+        }, initialOpenTime);
         setTimeout(() => {
             setIsLogoCode(true);
         }, initialTextTime);
 
-        const interval = setInterval(() => {  //afafsfafasfa
+        const interval = setInterval(() => {
             setIsLogoCode(false);
             setTimeout(() => {
                 setIsLogoCode(true);
@@ -27,7 +33,7 @@ export default function Logo() {
     }, []);
 
     return (
-        <span className="text-2xl font-semibold font-sans flex flex-row items-center justify-start">
+        <span className={`text-2xl font-semibold ${bigShouldersFont.className} tracking-wider flex flex-row items-center justify-start`}>
             <span className="select-none text-fourth">&#123;</span>
             <span className={`mx-[4px] inline-block transition-[max-width] duration-1000 ease-[cubic-bezier(.16,.81,.37,.98)] ${isLogoOpened ? "max-w-full" : "max-w-0"} overflow-hidden whitespace-nowrap`}>
                 <span>code i</span>
