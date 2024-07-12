@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./_components/navbar";
 import ThemeProvider from "./_providers/ThemeProvider";
+import PageTransitionProvider from "./_providers/PageTransitionProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -51,9 +52,10 @@ export default function RootLayout({
     <html data-theme="light" lang="en" suppressHydrationWarning>
       <body className={`text-primary ${inter.className}`}>
         <ThemeProvider>
-
-          <Navbar />
-          {children}
+          <PageTransitionProvider>
+            <Navbar />
+            {children}
+          </PageTransitionProvider>
         </ThemeProvider>
       </body>
     </html>

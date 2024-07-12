@@ -1,6 +1,5 @@
-'use client'
+"use client";
 
-import { Themes } from '@/types/themes';
 import { useState, useEffect, createContext, useContext, } from 'react';
 
 interface UseThemeProps {
