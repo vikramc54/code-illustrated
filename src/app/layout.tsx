@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Rubik } from "next/font/google";
 import "./globals.css";
+import "./reset.css";
 import Navbar from "./_components/navbar";
 import ThemeProvider from "./_providers/ThemeProvider";
 import PageTransitionProvider from "./_providers/PageTransitionProvider";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Rubik({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Code Illustrated",
